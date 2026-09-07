@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{52DDB99B-CD65-4158-AE0E-829ACDDAF3DD}|Infrastructure.Tests\\Infrastructure.Tests.csproj|e:\\empmgmtsystm\\productcatalog-assessment\\infrastructure.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52DDB99B-CD65-4158-AE0E-829ACDDAF3DD}|Infrastructure.Tests\\Infrastructure.Tests.csproj|solutionrelative:infrastructure.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A73E0833-958E-45A5-B24D-3F392EB43719}|Application.Tests\\Application.Tests.csproj|e:\\empmgmtsystm\\productcatalog-assessment\\application.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A73E0833-958E-45A5-B24D-3F392EB43719}|Application.Tests\\Application.Tests.csproj|solutionrelative:application.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E57ADB5-B778-4F65-AA86-33C2CF05467B}|API.Tests\\API.Tests.csproj|e:\\empmgmtsystm\\productcatalog-assessment\\api.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E57ADB5-B778-4F65-AA86-33C2CF05467B}|API.Tests\\API.Tests.csproj|solutionrelative:api.tests\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\Infrastructure.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "Infrastructure.Tests\\UnitTest1.cs",
+              "ToolTip": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\Infrastructure.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "Infrastructure.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T06:54:39.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\Application.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "Application.Tests\\UnitTest1.cs",
+              "ToolTip": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\Application.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "Application.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T06:54:02.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Tests\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "API.Tests\\UnitTest1.cs",
+              "ToolTip": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Tests\\UnitTest1.cs",
+              "RelativeToolTip": "API.Tests\\UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-07T06:53:15.681Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
