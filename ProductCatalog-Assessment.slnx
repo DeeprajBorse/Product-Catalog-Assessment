@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="API.API/API.API.csproj" />
     <Project Path="API.Application/API.Application.csproj" />
@@ -7,7 +10,10 @@
   </Folder>
   <Folder Name="/test/">
     <Project Path="API.Tests/API.Tests.csproj" />
-    <Project Path="Application.Tests/Application.Tests.csproj" />
+    <Project Path="Application.Test/Application.Test.csproj" Id="974f9dbd-2706-4864-ada4-7bb7b4aa7d49" />
     <Project Path="Infrastructure.Tests/Infrastructure.Tests.csproj" />
   </Folder>
+  <Project Path="docker-compose.dcproj">
+    <Build />
+  </Project>
 </Solution>
