@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System;
+using System.Security.Claims;
 using System.Text;
 
 namespace API.API
@@ -27,7 +28,7 @@ namespace API.API
                 throw new InvalidOperationException("JWT Issuer and Audience are required.");
             }
 
-            var key = Encoding.ASCII.GetBytes(secret);
+            var key = Encoding.UTF8.GetBytes(secret);
 
             services
                 .AddAuthentication(options =>
@@ -37,30 +38,32 @@ namespace API.API
                 })
                 .AddJwtBearer(options =>
                 {
-                    options.RequireHttpsMetadata = false; 
+                    options.RequireHttpsMetadata = false;
                     options.SaveToken = true;
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = new SymmetricSecurityKey(key),
-                        ValidateIssuer = false,
+                        ValidateIssuer = true,
                         ValidIssuer = issuer,
-                        ValidateAudience = false,
+                        ValidateAudience = true,
                         ValidAudience = audience,
                         ValidateLifetime = true,
-                        ClockSkew = TimeSpan.Zero 
+                        ClockSkew = TimeSpan.Zero,
+
+                        // Critical for role-based authorization:
+                        RoleClaimType = ClaimTypes.Role,
+                        NameClaimType = ClaimTypes.Name
                     };
 
-                    
                     options.Events = new JwtBearerEvents
                     {
                         OnAuthenticationFailed = context =>
                         {
                             if (context.Exception is SecurityTokenExpiredException)
                             {
-                                context.Response.Headers.Add("Token-Expired", "true");
+                                context.Response.Headers.Append("Token-Expired", "true");
                             }
-                            Console.WriteLine($"JWT Authentication Failed: {context.Exception.Message}");
                             return Task.CompletedTask;
                         },
                         OnChallenge = async context =>

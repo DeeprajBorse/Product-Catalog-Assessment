@@ -1,8 +1,10 @@
 ﻿using API.Application.DTO;
 using API.Application.DTOs;
 using API.Application.Interfaces;
+using API.Domain.Enum;
 using Asp.Versioning;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.API.Controllers.v1
@@ -21,11 +23,10 @@ namespace API.API.Controllers.v1
         }
 
         /// <summary>
-        /// Get all employees
+        /// Retrieves all employees (Admin & FrontDesk only).
         /// </summary>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [HttpGet]
+        [Authorize(Roles = $"{nameof(Roles.Admin)},{nameof(Roles.FrontDesk)}")]
         [ProducesResponseType(typeof(IEnumerable<EmpResponseDTO>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status403Forbidden)]
@@ -36,12 +37,10 @@ namespace API.API.Controllers.v1
         }
 
         /// <summary>
-        /// Get employee by id
+        /// Retrieves an employee by ID (Admin & FrontDesk only).
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [HttpGet("{id:int}")]
+        [Authorize(Roles = $"{nameof(Roles.Admin)},{nameof(Roles.FrontDesk)}")]
         [ProducesResponseType(typeof(EmpResponseDTO), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -53,12 +52,10 @@ namespace API.API.Controllers.v1
         }
 
         /// <summary>
-        /// Get employee by email
+        /// Retrieves an employee by Email (Admin & FrontDesk only).
         /// </summary>
-        /// <param name="email"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [HttpGet("by-email/{email}")]
+        [Authorize(Roles = $"{nameof(Roles.Admin)},{nameof(Roles.FrontDesk)}")]
         [ProducesResponseType(typeof(EmpResponseDTO), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -70,12 +67,10 @@ namespace API.API.Controllers.v1
         }
 
         /// <summary>
-        /// Create a new employee
+        /// Creates a new employee (Admin only).
         /// </summary>
-        /// <param name="dto"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
-        [HttpPost]
+        [HttpPost]        
+        [Authorize(Roles = nameof(Roles.Admin))]
         [ProducesResponseType(typeof(EmpResponseDTO), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -87,13 +82,10 @@ namespace API.API.Controllers.v1
         }
 
         /// <summary>
-        /// Update an existing employee
+        /// Updates an existing employee (Admin only).
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="dto"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [HttpPut("{id:int}")]
+        [Authorize(Roles = nameof(Roles.Admin))]
         [ProducesResponseType(typeof(EmpResponseDTO), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -105,12 +97,10 @@ namespace API.API.Controllers.v1
         }
 
         /// <summary>
-        /// Delete an employee by id
+        /// Deletes an employee (Admin only).
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="cancellationToken"></param>
-        /// <returns></returns>
         [HttpDelete("{id:int}")]
+        [Authorize(Roles = nameof(Roles.Admin))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]

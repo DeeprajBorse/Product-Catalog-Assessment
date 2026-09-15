@@ -13,7 +13,4 @@
     <Project Path="Application.Test/Application.Test.csproj" Id="974f9dbd-2706-4864-ada4-7bb7b4aa7d49" />
     <Project Path="Infrastructure.Tests/Infrastructure.Tests.csproj" />
   </Folder>
-  <Project Path="docker-compose.dcproj">
-    <Build />
-  </Project>
 </Solution>
