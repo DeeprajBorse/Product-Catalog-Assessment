@@ -23,7 +23,7 @@ namespace API.API.Controllers.v1
         }
 
         /// <summary>
-        /// Retrieves all employees (Admin & FrontDesk only).
+        /// Retrieves all employees.
         /// </summary>
         [HttpGet]
         [Authorize(Roles = $"{nameof(Roles.Admin)},{nameof(Roles.FrontDesk)}")]
@@ -37,7 +37,7 @@ namespace API.API.Controllers.v1
         }
 
         /// <summary>
-        /// Retrieves an employee by ID (Admin & FrontDesk only).
+        /// Retrieves an employee by ID.
         /// </summary>
         [HttpGet("{id:int}")]
         [Authorize(Roles = $"{nameof(Roles.Admin)},{nameof(Roles.FrontDesk)}")]
@@ -52,7 +52,7 @@ namespace API.API.Controllers.v1
         }
 
         /// <summary>
-        /// Retrieves an employee by Email (Admin & FrontDesk only).
+        /// Retrieves an employee by Email.
         /// </summary>
         [HttpGet("by-email/{email}")]
         [Authorize(Roles = $"{nameof(Roles.Admin)},{nameof(Roles.FrontDesk)}")]
@@ -67,10 +67,10 @@ namespace API.API.Controllers.v1
         }
 
         /// <summary>
-        /// Creates a new employee (Admin only).
+        /// Creates a new employee.
         /// </summary>
         [HttpPost]        
-        [Authorize(Roles = nameof(Roles.Admin))]
+        [Authorize(Roles = $"{nameof(Roles.Admin)},{nameof(Roles.FrontDesk)}")]
         [ProducesResponseType(typeof(EmpResponseDTO), StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -82,10 +82,10 @@ namespace API.API.Controllers.v1
         }
 
         /// <summary>
-        /// Updates an existing employee (Admin only).
+        /// Updates an existing employee.
         /// </summary>
         [HttpPut("{id:int}")]
-        [Authorize(Roles = nameof(Roles.Admin))]
+        [Authorize(Roles = $"{nameof(Roles.Admin)},{nameof(Roles.FrontDesk)}")]
         [ProducesResponseType(typeof(EmpResponseDTO), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -97,7 +97,7 @@ namespace API.API.Controllers.v1
         }
 
         /// <summary>
-        /// Deletes an employee (Admin only).
+        /// Deletes an employee.
         /// </summary>
         [HttpDelete("{id:int}")]
         [Authorize(Roles = nameof(Roles.Admin))]

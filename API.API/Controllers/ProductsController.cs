@@ -24,9 +24,6 @@ namespace API.API.Controllers
         /// <summary>
         /// Retrieves a paginated list of products.
         /// </summary>
-        /// <param name="pageNumber">Page index to fetch.</param>
-        /// <param name="pageSize">Number of items per page.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
         [HttpGet]
         [Authorize(Roles = $"{nameof(Roles.Admin)},{nameof(Roles.FrontDesk)},{nameof(Roles.User)}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -41,8 +38,6 @@ namespace API.API.Controllers
         /// <summary>
         /// Retrieves a product by its unique identifier.
         /// </summary>
-        /// <param name="id">Unique product ID.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
         [HttpGet("{id:int}")]
         [Authorize(Roles = $"{nameof(Roles.Admin)},{nameof(Roles.FrontDesk)},{nameof(Roles.User)}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -58,8 +53,6 @@ namespace API.API.Controllers
         /// <summary>
         /// Retrieves a product by its name.
         /// </summary>
-        /// <param name="productName">Name of the product.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
         [HttpGet("by-name/{productName}")]
         [Authorize(Roles = $"{nameof(Roles.Admin)},{nameof(Roles.FrontDesk)},{nameof(Roles.User)}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -75,8 +68,6 @@ namespace API.API.Controllers
         /// <summary>
         /// Retrieves a list of items associated with a specific product by its unique identifier.
         /// </summary>
-        /// <param name="productId">Unique product ID.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
         [HttpGet("{productId:int}/items")]
         [Authorize(Roles = $"{nameof(Roles.Admin)},{nameof(Roles.FrontDesk)},{nameof(Roles.User)}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -92,10 +83,8 @@ namespace API.API.Controllers
         /// <summary>
         /// Creates a new product along with associated items.
         /// </summary>
-        /// <param name="dto">Product creation payload.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
         [HttpPost]
-        [Authorize(Roles = nameof(Roles.Admin))] 
+        [Authorize(Roles = $"{nameof(Roles.Admin)},{nameof(Roles.FrontDesk)}")] 
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -109,11 +98,8 @@ namespace API.API.Controllers
         /// <summary>
         /// Updates an existing product by its unique identifier.
         /// </summary>
-        /// <param name="id">Unique product ID.</param>
-        /// <param name="dto">Product update payload.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
         [HttpPut("{id:int}")]
-        [Authorize(Roles = nameof(Roles.Admin))] 
+        [Authorize(Roles = $"{nameof(Roles.Admin)},{nameof(Roles.FrontDesk)}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -128,8 +114,6 @@ namespace API.API.Controllers
         /// <summary>
         /// Deletes a product by its unique identifier.
         /// </summary>
-        /// <param name="id">Unique product ID.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
         [HttpDelete("{id:int}")]
         [Authorize(Roles = nameof(Roles.Admin))] 
         [ProducesResponseType(StatusCodes.Status204NoContent)]

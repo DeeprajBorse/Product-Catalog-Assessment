@@ -3,6 +3,7 @@ using API.Application.AutoMapper;
 using API.Middleware;
 using Asp.Versioning;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.OpenApi.Models;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
+// Configure Swagger with XML comments and JWT Bearer authorization
 builder.Services.AddSwaggerGen(options =>
 {
     var xmlFilename = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -19,6 +21,33 @@ builder.Services.AddSwaggerGen(options =>
     {
         options.IncludeXmlComments(xmlPath);
     }
+
+    // 1. Add JWT Bearer Security Definition
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Enter your valid JWT token directly (e.g., eyJhbGciOiJIUzI1NiIsIn...)"
+    });
+
+    // 2. Require Bearer token for protected endpoints in Swagger
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
 });
 
 // Add Response Compression
@@ -40,7 +69,7 @@ builder.Services.Configure<BrotliCompressionProviderOptions>(options =>
     options.Level = System.IO.Compression.CompressionLevel.Fastest;
 });
 
-//Adding Serilog for logging
+// Adding Serilog for logging
 builder.Host.UseSerilog();
 
 // Add CORS policy
@@ -69,14 +98,14 @@ builder.Services.AddApiVersioning(options =>
     options.SubstituteApiVersionInUrl = true;
 });
 
-//Ad Health-Check
+// Add Health-Check
 builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 
 // Add custom middleware
-app.UseResponseCompression();  
-app.UseSecurityHeaders();      
+app.UseResponseCompression();
+app.UseSecurityHeaders();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 // Configure the HTTP request pipeline
@@ -87,7 +116,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.MapHealthChecks("/health");
 
 // Use CORS policy before authentication

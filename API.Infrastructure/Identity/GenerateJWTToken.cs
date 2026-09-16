@@ -28,12 +28,15 @@ namespace API.Infrastructure.Identity
 
             if (string.IsNullOrEmpty(issuer) || string.IsNullOrEmpty(audience))
                 throw new InvalidOperationException("JWT Issuer/Audience configuration is missing.");
+            var roleString = emp.Role.ToString();
 
             var claims = new[]
             {
+                new Claim(ClaimTypes.NameIdentifier, emp.Id.ToString()),
                 new Claim(ClaimTypes.Name, emp.Name),
                 new Claim(ClaimTypes.Email, emp.Email),
-                new Claim(ClaimTypes.Role, emp.Role.ToString())
+                new Claim(ClaimTypes.Role, roleString),
+                new Claim("role", roleString)
             };
 
             var tokenhandler = new JwtSecurityTokenHandler();
