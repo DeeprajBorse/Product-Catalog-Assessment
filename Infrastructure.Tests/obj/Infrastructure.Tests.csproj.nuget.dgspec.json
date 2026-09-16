@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\Infrastructure.Tests\\Infrastructure.Tests.csproj": {}
+    "E:\\Test-Project-Git\\Product-Catalog-Assessment\\Infrastructure.Tests\\Infrastructure.Tests.csproj": {}
   },
   "projects": {
-    "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Application\\API.Application.csproj": {
+    "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Application\\API.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Application\\API.Application.csproj",
+        "projectUniqueName": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Application\\API.Application.csproj",
         "projectName": "API.Application",
-        "projectPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Application\\API.Application.csproj",
+        "projectPath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Application\\API.Application.csproj",
         "packagesPath": "C:\\Users\\borse\\.nuget\\packages\\",
-        "outputPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Application\\obj\\",
+        "outputPath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -34,8 +34,8 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Domain\\API.Domain.csproj": {
-                "projectPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Domain\\API.Domain.csproj"
+              "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Domain\\API.Domain.csproj": {
+                "projectPath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Domain\\API.Domain.csproj"
               }
             }
           }
@@ -116,14 +116,14 @@
         }
       }
     },
-    "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Domain\\API.Domain.csproj": {
+    "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Domain\\API.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Domain\\API.Domain.csproj",
+        "projectUniqueName": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Domain\\API.Domain.csproj",
         "projectName": "API.Domain",
-        "projectPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Domain\\API.Domain.csproj",
+        "projectPath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Domain\\API.Domain.csproj",
         "packagesPath": "C:\\Users\\borse\\.nuget\\packages\\",
-        "outputPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Domain\\obj\\",
+        "outputPath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -212,14 +212,14 @@
         }
       }
     },
-    "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Infrastructure\\API.Infrastructure.csproj": {
+    "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Infrastructure\\API.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Infrastructure\\API.Infrastructure.csproj",
+        "projectUniqueName": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Infrastructure\\API.Infrastructure.csproj",
         "projectName": "API.Infrastructure",
-        "projectPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Infrastructure\\API.Infrastructure.csproj",
+        "projectPath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Infrastructure\\API.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\borse\\.nuget\\packages\\",
-        "outputPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Infrastructure\\obj\\",
+        "outputPath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -242,8 +242,8 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Application\\API.Application.csproj": {
-                "projectPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Application\\API.Application.csproj"
+              "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Application\\API.Application.csproj": {
+                "projectPath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Application\\API.Application.csproj"
               }
             }
           }
@@ -336,14 +336,14 @@
         }
       }
     },
-    "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\Infrastructure.Tests\\Infrastructure.Tests.csproj": {
+    "E:\\Test-Project-Git\\Product-Catalog-Assessment\\Infrastructure.Tests\\Infrastructure.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\Infrastructure.Tests\\Infrastructure.Tests.csproj",
+        "projectUniqueName": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\Infrastructure.Tests\\Infrastructure.Tests.csproj",
         "projectName": "Infrastructure.Tests",
-        "projectPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\Infrastructure.Tests\\Infrastructure.Tests.csproj",
+        "projectPath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\Infrastructure.Tests\\Infrastructure.Tests.csproj",
         "packagesPath": "C:\\Users\\borse\\.nuget\\packages\\",
-        "outputPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\Infrastructure.Tests\\obj\\",
+        "outputPath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\Infrastructure.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -366,8 +366,8 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Infrastructure\\API.Infrastructure.csproj": {
-                "projectPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Infrastructure\\API.Infrastructure.csproj"
+              "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Infrastructure\\API.Infrastructure.csproj": {
+                "projectPath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Infrastructure\\API.Infrastructure.csproj"
               }
             }
           }

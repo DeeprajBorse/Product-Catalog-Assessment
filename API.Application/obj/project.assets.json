@@ -2313,11 +2313,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Application\\API.Application.csproj",
+      "projectUniqueName": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Application\\API.Application.csproj",
       "projectName": "API.Application",
-      "projectPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Application\\API.Application.csproj",
+      "projectPath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Application\\API.Application.csproj",
       "packagesPath": "C:\\Users\\borse\\.nuget\\packages\\",
-      "outputPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Application\\obj\\",
+      "outputPath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2340,8 +2340,8 @@
           "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Domain\\API.Domain.csproj": {
-              "projectPath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Domain\\API.Domain.csproj"
+            "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Domain\\API.Domain.csproj": {
+              "projectPath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Domain\\API.Domain.csproj"
             }
           }
         }

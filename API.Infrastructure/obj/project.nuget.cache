@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ccz7o/qM80Q=",
+  "dgSpecHash": "Rswpw4ycO+M=",
   "success": true,
-  "projectFilePath": "E:\\EmpMgmtSystm\\ProductCatalog-Assessment\\API.Infrastructure\\API.Infrastructure.csproj",
+  "projectFilePath": "E:\\Test-Project-Git\\Product-Catalog-Assessment\\API.Infrastructure\\API.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\borse\\.nuget\\packages\\automapper\\16.2.0\\automapper.16.2.0.nupkg.sha512",
     "C:\\Users\\borse\\.nuget\\packages\\azure.core\\1.41.0\\azure.core.1.41.0.nupkg.sha512",

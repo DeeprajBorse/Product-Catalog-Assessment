@@ -7,9 +7,9 @@ namespace API.Tests
 {
     public static class AuthTokenHelper
     {
-        private const string SecretKey = "Test-Only-Secret-Key-That-Is-At-Least-32-Bytes-Long!";
-        private const string Issuer = "TestIssuer";
-        private const string Audience = "TestAudience";
+        private const string SecretKey = "KYePDI1a5We5ddfgtKIHWaPMx9W6s3EcW1knjfWk2o1";
+        private const string Issuer = "Issuer";
+        private const string Audience = "Audience";
 
         public static string GenerateToken(string role = "Admin", string email = "test@example.com", string name = "TestUser")
         {
@@ -18,7 +18,6 @@ namespace API.Tests
 
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, "1"),
                 new Claim(ClaimTypes.Name, name),
                 new Claim(ClaimTypes.Email, email),
                 new Claim(ClaimTypes.Role, role)
