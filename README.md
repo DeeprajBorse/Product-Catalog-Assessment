@@ -1,6 +1,6 @@
 # Product Catalog Management System (RESTful Web API)
 
-A production-ready RESTful Web API engineered with **ASP.NET Core (.NET 8)** following **Clean Architecture** and **Domain-Driven Design (DDD)** principles. The application incorporates role-based access control (RBAC), URL segment API versioning, structured logging via Serilog, response compression, global error handling conforming to RFC 7807, and automated tests across unit, integration, and persistence layers.
+An enterprise-style RESTful Web API built with ASP.NET Core (.NET 8), following Clean Architecture and Domain-Driven Design (DDD) principles. Built to demonstrate clean code separation, enterprise patterns (RBAC, versioning, structured logging), and comprehensive automated testing.
 
 ---
 
